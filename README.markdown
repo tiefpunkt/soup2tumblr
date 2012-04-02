@@ -7,4 +7,4 @@ I used a bunch of libraries to build this:
 * json.simple, a simple Java toolkit for JSON. Released under Apache 2.0 License.
 * Apache Commons Lang. Released under Apache 2.0 License.
 
-The libraries are included in the libs directory. tumblr-java uses a few libraries as well, which need to be included. Just run git submodule init to get the repository, and inclue the jar-files from libs/tumblr-java/libs in your classpath as well.
+The libraries are included in the libs directory. tumblr-java uses a few libraries as well, which need to be included. Just run git submodule update --init to get the repository, and inclue the jar-files from libs/tumblr-java/libs in your classpath as well.
