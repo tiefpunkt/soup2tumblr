@@ -1,0 +1,3 @@
+[submodule "libs/tumblr-java"]
+	path = libs/tumblr-java
+	url = https://github.com/tiefpunkt/tumblr-java.git
