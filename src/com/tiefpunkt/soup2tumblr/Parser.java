@@ -33,7 +33,7 @@ import org.xml.sax.SAXException;
 
 public class Parser {
 	
-	private final static String USAGE_HELP = "Usage: java -jar soup2tumblr.com <email> <password> <blog url> <input file>";
+	private final static String USAGE_HELP = "Usage: java -jar soup2tumblr.jar <email> <password> <blog url> <input file>";
 	private static String TUMBLR_EMAIL = "";
 	private static String TUMBLR_PASSWORD = "";
 	private static String TUMBLR_BLOG = "";
