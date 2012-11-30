@@ -32,9 +32,11 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class Parser {
-	private final static String TUMBLR_EMAIL = "";
-	private final static String TUMBLR_PASSWORD = "";
-	private final static String TUMBLR_BLOG = "";
+	
+	private final static String USAGE_HELP = "Usage: java -jar soup2tumblr.com <email> <password> <blog url> <input file>";
+	private static String TUMBLR_EMAIL = "";
+	private static String TUMBLR_PASSWORD = "";
+	private static String TUMBLR_BLOG = "";
 	
 	
 	/**
@@ -48,15 +50,25 @@ public class Parser {
 	public static void main(String[] args) throws SAXException, IOException,
 			ParserConfigurationException, ParseException, NoCredentialsException {
 		
-		// Check input parameter
-		if (args.length != 1) {
-			System.err.println("Y U NO specify input file?!?");
+		if ((args.length == 1) && (args[0].equalsIgnoreCase("--help"))) {
+			System.out.println(USAGE_HELP);
 			System.exit(1);
 		}
-
-		File f = new File(args[0]);
+		
+		// Check input parameter
+		if (args.length != 4) {
+			System.err.println("Bad parameters");
+			System.err.println(USAGE_HELP);
+			System.exit(1);
+		}
+		
+		TUMBLR_EMAIL = args[0];
+		TUMBLR_PASSWORD = args[1];
+		TUMBLR_BLOG = args[2];
+		
+		File f = new File(args[3]);
 		if (!f.exists() || !f.canRead()) {
-			System.err.println("Y U NO specify real input file?!?");
+			System.err.println("The input file could not be read. Does it exist?");
 			System.exit(1);
 		}
 		
