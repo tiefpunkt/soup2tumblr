@@ -8,3 +8,5 @@ I used a bunch of libraries to build this:
 * Apache Commons Lang. Released under Apache 2.0 License.
 
 The libraries are included in the libs directory. tumblr-java uses a few libraries as well, which need to be included. Just run git submodule update --init to get the repository, and inclue the jar-files from libs/tumblr-java/libs in your classpath as well.
+
+Licensed under MIT license. See LICENSE for details.
